@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Proweb 3</title>
+</head>
+<body>
+
+    <h3>Tugas 3</h3>
+   <fieldset>
+    Input Bilangan 1: <input type="number" id="b1"><br><br>
+    Input Bilangan 2: <input type="number" id="b2"><br><br>
+    
+    <button onclick="hitung('+')">+</button>
+    <button onclick="hitung('-')">-</button>
+    <button onclick="hitung('*')">x</button>
+    <button onclick="hitung('/')">/</button><br><br>
+    
+    Output: <input type="text" id="hasil" readonly>
+
+    <script>
+        function hitung(op) {
+            let a = Number(document.getElementById('b1').value);
+            let b = Number(document.getElementById('b2').value);
+            let h = 0;
+
+            if (op === '+') h = a + b;
+            if (op === '-') h = a - b;
+            if (op === '*') h = a * b;
+            if (op === '/') h = b !== 0 ? a / b : "Error";
+
+            document.getElementById('hasil').value = h;
+        }
+    </script>
+</fieldset>
+</body>
+</html>
